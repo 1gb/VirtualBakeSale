@@ -4,6 +4,6 @@ A Web VR Virtual Bake Sale - created for [Swim Across America](https://www.swima
 
 To  donate, visit [http://www.swimacrossamerica.org/goto/eve](http://www.swimacrossamerica.org/goto/eve)
 
-Built with [Glitch](https://glitch.me) and [A-Frame](https://aframe.io), a web framework for building virtual reality experiences.
+Built with [Glitch](https://glitch.me), a friendly community for coding, auto-deploying and collaborating on the web, and [A-Frame](https://aframe.io), a web framework for building virtual reality experiences.
 
 Click and drag on desktop. Open it on a smartphone and use the device motion sensors. Or [plug in a VR headset](https://aframe.io/docs/0.8.0/introduction/vr-headsets-and-webvr-browsers.html)!
