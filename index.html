@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SAA Virtual Bake Sale</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene renderer="gammaOutput: true">
+      <a-entity position="0 2.5 0">
+        <a-camera></a-camera>
+      </a-entity>
+
+      <a-assets>
+        <img
+          id="grass"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2Fgrass2.png?v=1626632145006"
+        />
+        <img
+          id="donateButton"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FDonateBtn.png?v=1627245201105"
+        />
+        <img
+          id="wood"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2Fwood2.jpg?v=1627178969285"
+        />
+        <img
+          id="sign"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FSign.png?v=1627246886782"
+        />
+        <img
+          id="brownieCard"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FbrownieCard.png?v=1627186777343"
+        />
+        <img
+          id="sprinkleDonutCard"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FsprinkleDonutCard.png?v=1627186781414"
+        />
+        <img
+          id="pieCard"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FpieCard.png?v=1627187522473"
+        />
+        <img
+          id="cinnaRollCard"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FcinnarollsCard.png?v=1627187523983"
+        />
+        <img
+          id="chocoCakeCard"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FChocCakeCard.png?v=1627187525809"
+        />
+        <img
+          id="pinkCakeCard"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FpinkCakeCard.png?v=1627187523098"
+        />
+        <img
+          id="cupcakesCard"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FcupcakeCard.png?v=1627187524420"
+        />
+        <img
+          id="macaronsCard"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FmacaronCard.png?v=1627187523775"
+        />
+        <img
+          id="cookiesCard"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FcookiesCard.png?v=1627187524877"
+        />
+        <img
+          id="muffinsCard"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FmuffinsCard.png?v=1627187525002"
+        />
+        <img
+          id="pretzelsCard"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FpretzelsCard.png?v=1627187523563"
+        />
+        <img
+          id="chocoDonutsCard"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FchocoDonutCard.png?v=1627187523260"
+        />
+
+        <a-asset-item
+          id="cupcake"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2Fcupcake.glb?v=1627155824661"
+        ></a-asset-item>
+        <a-asset-item
+          id="cookie"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FCookie.glb?v=1627157689806"
+        ></a-asset-item>
+        <a-asset-item
+          id="balloons"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FSCCA%20Balloons.glb?v=1627159690240"
+        ></a-asset-item>
+        <a-asset-item
+          id="macaron"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2Fmacaron.glb?v=1627156662860"
+        ></a-asset-item>
+        <a-asset-item
+          id="macaron1"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2Fmacaron1.glb?v=1627189789615"
+        ></a-asset-item>
+        <a-asset-item
+          id="macaron2"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2Fmacaron2.glb?v=1627189789731"
+        ></a-asset-item>
+        <a-asset-item
+          id="macaron3"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2Fmacaron3.glb?v=1627189789368"
+        ></a-asset-item>
+        <a-asset-item
+          id="sprinkleDonut"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FsprinkleDonut.glb?v=1627156033845"
+        ></a-asset-item>
+        <a-asset-item
+          id="pinkCake"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FpinkCake.glb?v=1627155659951"
+        ></a-asset-item>
+        <a-asset-item
+          id="cinnaRoll"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2Fcinnaroll.glb?v=1627154347694"
+        ></a-asset-item>
+        <a-asset-item
+          id="chocCake"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FchocCake.glb?v=1627154830257"
+        ></a-asset-item>
+        <a-asset-item
+          id="pie"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2Fpie.glb?v=1627156177147"
+        ></a-asset-item>
+        <a-asset-item
+          id="brownie"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2Fbrownie.glb?v=1627153734815"
+        ></a-asset-item>
+        <a-asset-item
+          id="chocDonut"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FchocDonut.glb?v=1627157989476"
+        ></a-asset-item>
+        <a-asset-item
+          id="pretzel"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2FPretzel.glb?v=1627174141619"
+        ></a-asset-item>
+        <a-asset-item
+          id="muffin"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2Fmuffin.glb?v=1627176563121"
+        ></a-asset-item>
+        <a-asset-item
+          id="bird"
+          src="https://cdn.glitch.com/577cb40a-84a0-43d4-b214-a141cb7e013a%2Fbird.glb?v=1627190970209"
+        ></a-asset-item>
+      </a-assets>
+
+      <!--       Sign -->
+
+      <a-cylinder
+        position="0 2.57 3"
+        color="#744622"
+        height="5.2"
+        radius="0.08"
+        rotation="0 180 0"
+      >
+        <a-entity
+          id="onlyBird"
+          gltf-model="#bird"
+          position="1.5 1.944 0.17"
+          scale="100 100 100"
+          rotation="0 0 0"
+        ></a-entity>
+        <a-box
+          position="0 0.5 0.1"
+          color="white"
+          depth="4"
+          height="3"
+          width="0.15"
+          rotation="0 90 0"
+        >
+          <a-plane
+            src="#sign"
+            position="-0.079 0 0"
+            color="FFF"
+            height="3"
+            width="4"
+            rotation="0 -90 0"
+            side="double"
+          ></a-plane>
+        </a-box>
+      </a-cylinder>
+      <!--       <a-cylinder position="0 0 -4" color="blue" height="4" radius="1">
+          <a-cylinder position="0 2 0" color="#FFF4D6" height="0.04" radius="1">
+            <a-cone color="#ff4e4e" radius-bottom="0.5" radius-top="0.04"></a-cone>          
+          </a-cylinder>
+        </a-cylinder> -->
+      <!-- <a-cylinder position="0 0 0" radius="0.5" height="3" color="red"></a-cylinder> -->
+
+      <!--       Table 1 -->
+      <a-box
+        position="-7 1.5 -3"
+        rotation="0 0 0"
+        color="#744622"
+        depth="12"
+        height="0.3"
+        width="4"
+        src="#wood"
+      >
+        <!--         Cards -->
+        <a-plane
+          position="1.6 0.43 5"
+          src="#brownieCard"
+          height="0.6"
+          width="0.8"
+          rotation="-20 90 0"
+          side="double"
+        >
+          <a-plane
+            position="0 0.074 -0.196"
+            color="FFF"
+            height="0.6"
+            width="0.8"
+            rotation="40 0 0"
+            side="double"
+          ></a-plane>
+        </a-plane>
+
+        <a-plane
+          position="1.6 0.43 2"
+          src="#sprinkleDonutCard"
+          height="0.6"
+          width="0.8"
+          rotation="-20 90 0"
+          side="double"
+        >
+          <a-plane
+            position="0 0.074 -0.196"
+            color="FFF"
+            height="0.6"
+            width="0.8"
+            rotation="40 0 0"
+            side="double"
+          ></a-plane>
+        </a-plane>
+
+        <a-plane
+          position="1.6 0.43 -1"
+          src="#pieCard"
+          height="0.6"
+          width="0.8"
+          rotation="-20 90 0"
+          side="double"
+        >
+          <a-plane
+            position="0 0.074 -0.196"
+            color="FFF"
+            height="0.6"
+            width="0.8"
+            rotation="40 0 0"
+            side="double"
+          ></a-plane>
+        </a-plane>
+
+        <a-plane
+          position="1.6 0.43 -4"
+          src="#cinnaRollCard"
+          height="0.6"
+          width="0.8"
+          rotation="-20 90 0"
+          side="double"
+        >
+          <a-plane
+            position="0 0.074 -0.196"
+            color="FFF"
+            height="0.6"
+            width="0.8"
+            rotation="40 0 0"
+            side="double"
+          ></a-plane>
+        </a-plane>
+
+        <!--         Table Legs -->
+        <a-box
+          position="1.8 -1 5.8"
+          rotation="0 0 0"
+          color="#744622"
+          src="#wood"
+          depth="0.3"
+          height="2"
+          width="0.3"
+        ></a-box>
+        <a-box
+          position="-1.8 -1 5.8"
+          rotation="0 0 0"
+          color="#744622"
+          src="#wood"
+          depth="0.3"
+          height="2"
+          width="0.3"
+        ></a-box>
+        <a-box
+          position="1.8 -1 -5.8"
+          rotation="0 0 0"
+          color="#744622"
+          src="#wood"
+          depth="0.3"
+          height="2"
+          width="0.3"
+        ></a-box>
+        <a-box
+          position="-1.8 -1 -5.8"
+          rotation="0 0 0"
+          color="#744622"
+          src="#wood"
+          depth="0.3"
+          height="2"
+          width="0.3"
+        ></a-box>
+
+        <!--         Plates -->
+        <!--         <a-cylinder position="0 0.2 4.5" color="#FFF4D6" height="0.04" radius="1"> -->
+        <a-cylinder
+          position="0 0.2 4.5"
+          color="#FFF4D6"
+          height="0.04"
+          radius="1"
+          animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; easing: linear; dur: 30000"
+        >
+          <!--           Brownies -->
+          <a-entity
+            gltf-model="#brownie"
+            scale="0.014 0.005 0.014"
+            position="0 0 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#brownie"
+            scale="0.005 0.005 0.005"
+            position="0 1 0"
+          ></a-entity>
+          <!--           <a-box position="0 0.1 0" height="0.25" width="1.3" rotation="0 5 0" src="#brownieTexture" repeat="2 2"></a-box>
+          <a-box position="0 1 0" height="0.2" width="0.4" depth="0.3" rotation="0 5 0" src="#brownieTexture"></a-box> -->
+        </a-cylinder>
+
+        <!--         <a-cylinder position="0 0.2 1.5" color="#FFF4D6" height="0.04" radius="1"> -->
+        <a-cylinder
+          position="0 0.2 1.5"
+          color="#FFF4D6"
+          height="0.04"
+          radius="1"
+          animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; easing: linear; dur: 30000"
+        >
+          <!-- Donut -->
+          <a-entity
+            gltf-model="#sprinkleDonut"
+            position="0 1.5 0"
+            scale="0.015 0.015 0.015"
+            rotation="0 180 90"
+          ></a-entity>
+          <a-entity
+            gltf-model="#sprinkleDonut"
+            position="0.55 0.2 0"
+            scale="0.015 0.015 0.015"
+            rotation="0 180 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#sprinkleDonut"
+            position="-0.3 0.2 0.4"
+            scale="0.015 0.015 0.015"
+            rotation="0 180 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#sprinkleDonut"
+            position="-0.2 0.2 -0.5"
+            scale="0.015 0.015 0.015"
+            rotation="0 180 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#sprinkleDonut"
+            position="0 0.5 0"
+            scale="0.015 0.015 0.015"
+            rotation="0 180 0"
+          ></a-entity>
+        </a-cylinder>
+
+        <a-cylinder
+          position="0 0.2 -1.5"
+          color="#FFF4D6"
+          height="0.04"
+          radius="1"
+          rotation="0 0 0"
+          animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; easing: linear; dur: 30000"
+        >
+          <!--         <a-cylinder position="0 0.2 -1.5" color="#FFF4D6" height="0.04" radius="1" rotation="0 0 0"> -->
+          <!--           <a-entity light="type: point; intensity: 1; distance: 10; decay: 1" position="2 5 0"></a-entity> -->
+          <a-entity
+            gltf-model="#pie"
+            position="0 0 0"
+            scale="0.02 0.02 0.02"
+          ></a-entity>
+        </a-cylinder>
+
+        <!--         <a-cylinder position="0 0.2 -4.5" color="#FFF4D6" height="0.04" radius="1"> -->
+        <a-cylinder
+          position="0 0.2 -4.5"
+          color="#FFF4D6"
+          height="0.04"
+          radius="1"
+          animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; easing: linear; dur: 30000"
+        >
+          <a-entity
+            gltf-model="#cinnaRoll"
+            scale="0.007 0.007 0.007"
+            position="0 1 0"
+            rotation="0 240 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cinnaRoll"
+            scale="0.005 0.005 0.005"
+            position="0 0 0.2"
+            rotation="0 45 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cinnaRoll"
+            scale="0.005 0.005 0.005"
+            position="0.5 0 0"
+            rotation="0 90 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cinnaRoll"
+            scale="0.005 0.005 0.005"
+            position="0.5 0 0.5"
+            rotation="0 220 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cinnaRoll"
+            scale="0.005 0.005 0.005"
+            position="-0.5 0 0"
+            rotation="0 200 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cinnaRoll"
+            scale="0.005 0.005 0.005"
+            position="-0.5 0 -0.5"
+            rotation="0 -5 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cinnaRoll"
+            scale="0.005 0.005 0.005"
+            position="0.5 0 -0.5"
+            rotation="0 -10 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cinnaRoll"
+            scale="0.005 0.005 0.005"
+            position="0 0 0.7"
+            rotation="0 0 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cinnaRoll"
+            scale="0.005 0.005 0.005"
+            position="0 0 -0.7"
+            rotation="0 -90 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cinnaRoll"
+            scale="0.005 0.005 0.005"
+            position="-0.5 0 0.5"
+            rotation="0 180 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cinnaRoll"
+            scale="0.005 0.005 0.005"
+            position="0 0 -0.25"
+          ></a-entity>
+        </a-cylinder>
+      </a-box>
+
+      <!--       Table 2 -->
+      <a-box
+        position="7 1.5 -3"
+        rotation="0 0 0"
+        color="#744622"
+        depth="12"
+        height="0.3"
+        width="4"
+        src="#wood"
+      >
+        <!--         Cards -->
+        <a-plane
+          position="-1.6 0.43 5"
+          src="#chocoDonutsCard"
+          height="0.6"
+          width="0.8"
+          rotation="-20 -90 0"
+          side="double"
+        >
+          <a-plane
+            position="0 0.074 -0.196"
+            color="FFF"
+            height="0.6"
+            width="0.8"
+            rotation="40 0 0"
+            side="double"
+          ></a-plane>
+        </a-plane>
+
+        <a-plane
+          position="-1.6 0.43 2"
+          src="#pretzelsCard"
+          height="0.6"
+          width="0.8"
+          rotation="-20 -90 0"
+          side="double"
+        >
+          <a-plane
+            position="0 0.074 -0.196"
+            color="FFF"
+            height="0.6"
+            width="0.8"
+            rotation="40 0 0"
+            side="double"
+          ></a-plane>
+        </a-plane>
+
+        <a-plane
+          position="-1.6 0.43 -1"
+          src="#muffinsCard"
+          height="0.6"
+          width="0.8"
+          rotation="-20 -90 0"
+          side="double"
+        >
+          <a-plane
+            position="0 0.074 -0.196"
+            color="FFF"
+            height="0.6"
+            width="0.8"
+            rotation="40 0 0"
+            side="double"
+          ></a-plane>
+        </a-plane>
+
+        <a-plane
+          position="-1.6 0.43 -4"
+          src="#cookiesCard"
+          height="0.6"
+          width="0.8"
+          rotation="-20 -90 0"
+          side="double"
+        >
+          <a-plane
+            position="0 0.074 -0.196"
+            color="FFF"
+            height="0.6"
+            width="0.8"
+            rotation="40 0 0"
+            side="double"
+          ></a-plane>
+        </a-plane>
+        <!--         Table Legs -->
+        <a-box
+          position="1.8 -1 5.8"
+          rotation="0 0 0"
+          color="#744622"
+          src="#wood"
+          depth="0.3"
+          height="2"
+          width="0.3"
+        ></a-box>
+        <a-box
+          position="-1.8 -1 5.8"
+          rotation="0 0 0"
+          color="#744622"
+          src="#wood"
+          depth="0.3"
+          height="2"
+          width="0.3"
+        ></a-box>
+        <a-box
+          position="1.8 -1 -5.8"
+          rotation="0 0 0"
+          color="#744622"
+          src="#wood"
+          depth="0.3"
+          height="2"
+          width="0.3"
+        ></a-box>
+        <a-box
+          position="-1.8 -1 -5.8"
+          rotation="0 0 0"
+          color="#744622"
+          src="#wood"
+          depth="0.3"
+          height="2"
+          width="0.3"
+        ></a-box>
+
+        <!--         Plates -->
+        <!--         <a-cylinder position="0 0.2 1.5" color="#FFF4D6" height="0.04" radius="1"> -->
+        <a-cylinder
+          position="0 0.2 1.5"
+          color="#FFF4D6"
+          height="0.04"
+          radius="1"
+          animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; easing: linear; dur: 30000"
+        >
+          <a-cylinder
+            position="0.5 0.7 0"
+            color="#FFF4D6"
+            height="1.5"
+            radius="0.08"
+          ></a-cylinder>
+          <a-cylinder
+            position="-0.1 1 0"
+            color="#FFF4D6"
+            height="1.15"
+            radius="0.04"
+            rotation="90 90 0"
+          ></a-cylinder>
+          <a-entity
+            gltf-model="#pretzel"
+            position="0.1 0.75 0.15"
+            scale="6 6 6"
+            rotation="0 0 90"
+          ></a-entity>
+          <a-entity
+            gltf-model="#pretzel"
+            position="0.35 0.75 0.15"
+            scale="6 6 6"
+            rotation="7 -5 90"
+          ></a-entity>
+          <a-entity
+            gltf-model="#pretzel"
+            position="-0.15 0.75 0.15"
+            scale="6 6 6"
+            rotation="-5 0 90"
+          ></a-entity>
+          <a-entity
+            gltf-model="#pretzel"
+            position="-0.4 0.75 0.15"
+            scale="6 6 6"
+            rotation="5 5 90"
+          ></a-entity>
+
+          <a-entity
+            gltf-model="#pretzel"
+            position="0 2.2 0"
+            scale="6 6 6"
+            rotation="90 0 90"
+          ></a-entity>
+        </a-cylinder>
+        <!--         <a-cylinder position="0 0.2 4.5" color="#FFF4D6" height="0.04" radius="1"> -->
+        <a-cylinder
+          position="0 0.2 4.5"
+          color="#FFF4D6"
+          height="0.04"
+          radius="1"
+          animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; easing: linear; dur: 30000"
+        >
+          <a-entity
+            gltf-model="#chocDonut"
+            position="0 1.5 0"
+            scale="0.008 0.008 0.008"
+            rotation="0 180 -90"
+          ></a-entity>
+          <a-entity
+            gltf-model="#chocDonut"
+            position="0.55 0 0"
+            scale="0.008 0.008 0.008"
+            rotation="0 180 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#chocDonut"
+            position="-0.3 0 0.4"
+            scale="0.008 0.008 0.008"
+            rotation="0 180 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#chocDonut"
+            position="-0.2 0 -0.5"
+            scale="0.008 0.008 0.008"
+            rotation="0 180 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#chocDonut"
+            position="0 0.3 0"
+            scale="0.008 0.008 0.008"
+            rotation="0 180 0"
+          ></a-entity>
+        </a-cylinder>
+        <a-cylinder
+          position="0 0.2 -1.5"
+          color="#FFF4D6"
+          height="0.04"
+          radius="1"
+          animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; easing: linear; dur: 30000"
+        >
+          <!--         Muffins -->
+          <a-entity
+            gltf-model="#muffin"
+            position="0 1 0"
+            scale="0.008s 0.008s 0.008"
+            rotation="0 0 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#muffin"
+            position="0 0 0.52"
+            scale="0.005 0.005 0.005"
+            rotation="0 98 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#muffin"
+            position="0 0 0"
+            scale="0.005 0.005 0.005"
+            rotation="-0 -45 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#muffin"
+            position="0 0 -0.52"
+            scale="0.005 0.005 0.005"
+            rotation="0 -90 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#muffin"
+            position="0.52 0 0.52"
+            scale="0.005 0.005 0.005"
+            rotation="0 135 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#muffin"
+            position="0.52 0 0"
+            scale="0.005 0.005 0.005"
+            rotation="0 -115 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#muffin"
+            position="0.52 0 -0.520"
+            scale="0.005 0.005 0.005"
+            rotation="0 50 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#muffin"
+            position="-0.52 0 0.52"
+            scale="0.005 0.005 0.005"
+            rotation="0 30 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#muffin"
+            position="-0.52 0 0"
+            scale="0.005 0.005 0.005"
+            rotation="0 240 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#muffin"
+            position="-0.52 0 -0.520"
+            scale="0.005 0.005 0.005"
+            rotation="0 -200 0"
+          ></a-entity>
+        </a-cylinder>
+        <a-cylinder
+          position="0 0.2 -4.5"
+          color="#FFF4D6"
+          height="0.04"
+          radius="1"
+          animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; easing: linear; dur: 30000"
+        >
+          <a-entity
+            gltf-model="#cookie"
+            position="0 1.5 0"
+            scale="9 9 9"
+            rotation="0 0 90"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cookie"
+            position="-0.5 0 -0.25"
+            scale="9 9 9"
+            rotation="0 90 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cookie"
+            position="0.5 0 -0.25"
+            scale="9 9 9"
+            rotation="0 -120 "
+          ></a-entity>
+          <a-entity
+            gltf-model="#cookie"
+            position="0 0 0.55"
+            scale="9 9 9"
+            rotation="0 180 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cookie"
+            position="-0.5 0.15 -0.25"
+            scale="9 9 9"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cookie"
+            position="0.5 0.15 -0.25"
+            scale="9 9 9"
+            rotation="0 -45 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cookie"
+            position="0 0.15 0.55"
+            scale="9 9 9"
+            rotation="0 20 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cookie"
+            position="0 0.3 0"
+            scale="9 9 9"
+            rotation="0 45 0"
+          ></a-entity>
+        </a-cylinder>
+      </a-box>
+
+      <!--       Table 3 -->
+      <a-box
+        position="0 1.1 -12"
+        rotation="0 90 0"
+        color="#744622"
+        depth="12"
+        height="0.3"
+        width="4"
+        src="#wood"
+      >
+        <a-entity
+          gltf-model="#balloons"
+          position="2 0 6"
+          scale="10 10 10"
+          rotation="0 0 0"
+        ></a-entity>
+        <a-entity
+          gltf-model="#balloons"
+          position="2 0 -6"
+          scale="10 10 10"
+          rotation="0 -100 0"
+        ></a-entity>
+
+        <!--         Cards -->
+        <a-plane
+          position="-1.6 0.43 5"
+          src="#macaronsCard"
+          height="0.6"
+          width="0.8"
+          rotation="-20 -90 0"
+          side="double"
+        >
+          <a-plane
+            position="0 0.074 -0.196"
+            color="FFF"
+            height="0.6"
+            width="0.8"
+            rotation="40 0 0"
+            side="double"
+          ></a-plane>
+        </a-plane>
+
+        <a-plane
+          position="-1.6 0.43 2"
+          src="#pinkCakeCard"
+          height="0.6"
+          width="0.8"
+          rotation="-20 -90 0"
+          side="double"
+        >
+          <a-plane
+            position="0 0.074 -0.196"
+            color="FFF"
+            height="0.6"
+            width="0.8"
+            rotation="40 0 0"
+            side="double"
+          ></a-plane>
+        </a-plane>
+
+        <a-plane
+          position="-1.6 0.43 -1"
+          src="#cupcakesCard"
+          height="0.6"
+          width="0.8"
+          rotation="-20 -90 0"
+          side="double"
+        >
+          <a-plane
+            position="0 0.074 -0.196"
+            color="FFF"
+            height="0.6"
+            width="0.8"
+            rotation="40 0 0"
+            side="double"
+          ></a-plane>
+        </a-plane>
+
+        <a-plane
+          position="-1.6 0.43 -4"
+          src="#chocoCakeCard"
+          height="0.6"
+          width="0.8"
+          rotation="-20 -90 0"
+          side="double"
+        >
+          <a-plane
+            position="0 0.074 -0.196"
+            color="FFF"
+            height="0.6"
+            width="0.8"
+            rotation="40 0 0"
+            side="double"
+          ></a-plane>
+        </a-plane>
+
+        <!--         Table Legs -->
+        <a-box
+          position="1.8 -1 5.8"
+          rotation="0 0 0"
+          color="#744622"
+          src="#wood"
+          depth="0.3"
+          height="2"
+          width="0.3"
+        ></a-box>
+        <a-box
+          position="-1.8 -1 5.8"
+          rotation="0 0 0"
+          color="#744622"
+          src="#wood"
+          depth="0.3"
+          height="2"
+          width="0.3"
+        ></a-box>
+        <a-box
+          position="1.8 -1 -5.8"
+          rotation="0 0 0"
+          color="#744622"
+          src="#wood"
+          depth="0.3"
+          height="2"
+          width="0.3"
+        ></a-box>
+        <a-box
+          position="-1.8 -1 -5.8"
+          rotation="0 0 0"
+          color="#744622"
+          src="#wood"
+          depth="0.3"
+          height="2"
+          width="0.3"
+        ></a-box>
+
+        <!--         Plates -->
+        <!--         <a-cylinder position="0 0.9 -1.5" color="#FFF4D6" height="0.04" radius="1.2" rotation="0 0 0"> -->
+        <a-cylinder
+          position="0 0.9 -1.5"
+          color="#FFF4D6"
+          height="0.04"
+          radius="1.2"
+          rotation="0 0 0"
+          animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; easing: linear; dur: 30000"
+        >
+          <!--         Cake stand -->
+          <a-cylinder
+            position="0 -0.7 0"
+            color="#FFF4D6"
+            height="0.04"
+            radius="0.7"
+          ></a-cylinder>
+          <a-cylinder
+            position="0 -0.5 0"
+            color="#FFF4D6"
+            height="1"
+            radius="0.1"
+          ></a-cylinder>
+          <a-cylinder
+            position="0 -0.65 0"
+            color="#FFF4D6"
+            height="0.1"
+            radius="0.2"
+          ></a-cylinder>
+          <a-cylinder
+            position="0 0.3 0"
+            color="#FFF4D6"
+            height="1"
+            radius="0.1"
+          ></a-cylinder>
+          <a-cylinder
+            position="0 0.8 0"
+            color="#FFF4D6"
+            height="0.04"
+            radius="1"
+          ></a-cylinder>
+          <a-cylinder
+            position="0 1 0"
+            color="#FFF4D6"
+            height="1"
+            radius="0.1"
+          ></a-cylinder>
+          <a-cylinder
+            position="0 1.5 0"
+            color="#FFF4D6"
+            height="0.04"
+            radius="0.5"
+          ></a-cylinder>
+
+          <!--           Cupcakes -->
+          <a-entity
+            gltf-model="#cupcake"
+            scale="0.004 0.004 0.004"
+            position="0 0 0.8"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cupcake"
+            scale="0.004 0.004 0.004"
+            position="0 0 -0.8"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cupcake"
+            scale="0.004 0.004 0.004"
+            position="0.6 0 0.6"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cupcake"
+            scale="0.004 0.004 0.004"
+            position="0.6 0 -0.6"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cupcake"
+            scale="0.004 0.004 0.004"
+            position="-0.6 0 0.6"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cupcake"
+            scale="0.004 0.004 0.004"
+            position="-0.6 0 -0.6"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cupcake"
+            scale="0.004 0.004 0.004"
+            position="0.8 0 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cupcake"
+            scale="0.004 0.004 0.004"
+            position="-0.8 0 0"
+          ></a-entity>
+
+          <a-entity
+            gltf-model="#cupcake"
+            scale="0.004 0.004 0.004"
+            position="0 0.8 0.7"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cupcake"
+            scale="0.004 0.004 0.004"
+            position="0 0.8 -0.7"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cupcake"
+            scale="0.004 0.004 0.004"
+            position="0.5 0.8 0.5"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cupcake"
+            scale="0.004 0.004 0.004"
+            position="0.5 0.8 -0.5"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cupcake"
+            scale="0.004 0.004 0.004"
+            position="-0.5 0.8 0.5"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cupcake"
+            scale="0.004 0.004 0.004"
+            position="-0.5 0.8 -0.5"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cupcake"
+            scale="0.004 0.004 0.004"
+            position="0.7 0.8 0"
+          ></a-entity>
+          <a-entity
+            gltf-model="#cupcake"
+            scale="0.004 0.004 0.004"
+            position="-0.7 0.8 0"
+          ></a-entity>
+
+          <a-entity
+            gltf-model="#cupcake"
+            scale="0.006 0.006 0.006"
+            position="0 1.5 0"
+          ></a-entity>
+        </a-cylinder>
+
+        <!--         <a-cylinder position="0 0.9 4.5" color="#FFF4D6" height="0.04" radius="1"> -->
+        <a-cylinder
+          position="0 0.9 4.5"
+          color="#FFF4D6"
+          height="0.04"
+          radius="1"
+          animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; easing: linear; dur: 20000"
+        >
+          <!-- stand -->
+          <a-cylinder
+            position="0 -0.7 0"
+            color="#FFF4D6"
+            height="0.04"
+            radius="0.7"
+          ></a-cylinder>
+          <a-cylinder
+            position="0 -0.5 0"
+            color="#FFF4D6"
+            height="1"
+            radius="0.1"
+          ></a-cylinder>
+          <a-cylinder
+            position="0 -0.65 0"
+            color="#FFF4D6"
+            height="0.1"
+            radius="0.2"
+          ></a-cylinder>
+
+          <!--             top -->
+          <a-entity
+            gltf-model="#macaron3"
+            position="0 1.6 -0.1"
+            scale="0.004 0.004 0.004"
+            rotation="0 90 90"
+          ></a-entity>
+
+          <!--           inside -->
+          <!--             <a-cone position="0 0.5d 0" color="#ff4e4e" radius-bottom="0.7" radius-top="0.04"></a-cone>           -->
+
+          <!-- base layer -->
+          <a-cylinder
+            position="0 0 0"
+            color="white"
+            height="0.001"
+            radius="0.001"
+          >
+            <a-entity
+              gltf-model="#macaron"
+              position="-0.7 0 -0.4"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron"
+              position="0.7 0 -0.4"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron"
+              position="-0.7 0 0.4"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron"
+              position="0.7 0 0.4"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron"
+              position="0 0 0.8"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron"
+              position="0 0 -0.8"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+          </a-cylinder>
+          <a-cylinder
+            position="0 0 0"
+            color="white"
+            height="0.001"
+            radius="0.001"
+            rotation="0 90 0"
+          >
+            <a-entity
+              gltf-model="#macaron"
+              position="-0.7 0 -0.4"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron"
+              position="0.7 0 -0.4"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron"
+              position="-0.7 0 0.4"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron"
+              position="0.7 0 0.4"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron"
+              position="0 0 0.8"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron"
+              position="0 0 -0.8"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+          </a-cylinder>
+
+          <!--             second layer -->
+          <a-cylinder
+            position="0 0.18 0"
+            color="white"
+            height="0.001"
+            radius="0.001"
+            rotation="0 45 0"
+          >
+            <a-entity
+              gltf-model="#macaron"
+              position="-0.6 0 -0.35"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron"
+              position="0.6 0 -0.35"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron"
+              position="-0.6 0 0.35"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron"
+              position="0.6 0 0.35"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron"
+              position="0 0 0.65"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron"
+              position="0 0 -0.65"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+          </a-cylinder>
+          <a-cylinder
+            position="0 0.18 0"
+            color="white"
+            height="0.001"
+            radius="0.001"
+            rotation="0 135 0"
+          >
+            <a-entity
+              gltf-model="#macaron"
+              position="-0.6 0 -0.35"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron"
+              position="0.6 0 -0.35"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron"
+              position="-0.6 0 0.35"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron"
+              position="0.6 0 0.35"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron"
+              position="0 0 0.65"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron"
+              position="0 0 -0.65"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+          </a-cylinder>
+
+          <!--             third layer -->
+          <a-cylinder
+            position="0 0.36 0"
+            color="white"
+            height="0.001"
+            radius="0.001"
+            rotation="0 0 0"
+          >
+            <a-entity
+              gltf-model="#macaron1"
+              position="0 0 0.53"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron1"
+              position="0 0 -0.53"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron1"
+              position="0.53 0 0"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron1"
+              position="-0.53 0 0"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+
+            <a-entity
+              gltf-model="#macaron1"
+              position="0.35 0 0.35"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron1"
+              position="-0.35 0 0.35"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron1"
+              position="0.35 0 -0.35"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron1"
+              position="-0.35 0 -0.35"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+          </a-cylinder>
+          <!--             Fourth layer -->
+          <a-cylinder
+            position="0 0.54 0"
+            color="white"
+            height="0.001"
+            radius="0.001"
+            rotation="0 20 0"
+          >
+            <a-entity
+              gltf-model="#macaron1"
+              position="0 0 0.45"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron1"
+              position="0 0 -0.45"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron1"
+              position="0.45 0 0"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron1"
+              position="-0.45 0 0"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+
+            <a-entity
+              gltf-model="#macaron1"
+              position="0.3 0 0.3"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron1"
+              position="-0.3 0 0.3"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron1"
+              position="0.3 0 -0.3"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron1"
+              position="-0.3 0 -0.3"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+          </a-cylinder>
+          <!--             Fifth layer -->
+          <a-cylinder
+            position="0 0.72 0"
+            color="white"
+            height="0.001"
+            radius="0.001"
+            rotation="0 0 0"
+          >
+            <a-entity
+              gltf-model="#macaron2"
+              position="0 0 0.3"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron2"
+              position="0 0 -0.3"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron2"
+              position="0.3 0 0"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron2"
+              position="-0.3 0 0"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+          </a-cylinder>
+          <!--             Sixth layer -->
+          <a-cylinder
+            position="0 0.90 0"
+            color="white"
+            height="0.001"
+            radius="0.001"
+            rotation="0 45 0"
+          >
+            <a-entity
+              gltf-model="#macaron2"
+              position="0 0 0.22"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron2"
+              position="0 0 -0.22"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron2"
+              position="0.22 0 0"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+            <a-entity
+              gltf-model="#macaron2"
+              position="-0.22 0 0"
+              scale="0.004 0.004 0.004"
+              rotation="0 90 0"
+            ></a-entity>
+          </a-cylinder>
+
+          <!--             Top -->
+          <a-entity
+            gltf-model="#macaron3"
+            position="0 1.08 0"
+            scale="0.004 0.004 0.004"
+            rotation="0 90 0"
+          ></a-entity>
+        </a-cylinder>
+
+        <!--         <a-cylinder position="0 0.2 1.5" color="#FFF4D6" height="0.04" radius="1"> -->
+        <a-cylinder
+          position="0 0.2 1.5"
+          color="#FFF4D6"
+          height="0.04"
+          radius="1"
+          animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; easing: linear; dur: 30000"
+        >
+          <a-entity
+            gltf-model="#pinkCake"
+            scale="0.1 0.1 0.1"
+            position="0 0 0"
+          ></a-entity>
+        </a-cylinder>
+
+        <!--         <a-cylinder position="0 0.2 -4.5" color="#FFF4D6" height="0.04" radius="1"> -->
+        <a-cylinder
+          position="0 0.2 -4.5"
+          color="#FFF4D6"
+          height="0.04"
+          radius="1"
+          animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; easing: linear; dur: 30000"
+        >
+          <a-entity
+            gltf-model="#chocCake"
+            position="0 0 0"
+            scale="1 1 1"
+            rotation="0 180 0"
+          ></a-entity>
+        </a-cylinder>
+      </a-box>
+
+      <!--       Ground -->
+      <a-plane
+        position="0 0 0"
+        src="#grass"
+        repeat="25 25"
+        rotation="-90 0 0"
+        width="100"
+        height="100"
+        color="#72BD71"
+      ></a-plane>
+
+      <a-entity environment></a-entity>
+
+      <!--       Sky -->
+      <!--       <a-entity environment="preset: forest; skyType: gradient; ground: 'hills'; dressingAmount: 10; skyColor: #75D4FA; groundColor: #CCC;"></a-entity> -->
+      <!--             <a-sky color="#C8EFFF"></a-sky> -->
+      <!--        <a-entity environment="preset: forest; dressingAmount: 500"></a-entity> -->
+    </a-scene>
+  </body>
+</html>
